@@ -4,8 +4,6 @@
 #include <unistd.h>
 #include <string.h>
 
-int checkVal;
-
 typedef struct sharedobject {
 	FILE *rfile;
 	int linenum;
@@ -76,6 +74,7 @@ void *consumer(void *arg) {
         line = so->line;
         if (line == NULL) {
             pthread_cond_signal(&prodCond);
+            pthread_cond_broadcast(&consCond); //if there is no line to read, wake up all blocked consumers. It prevents deadlock.
             pthread_mutex_unlock(&so->lock);
             break;
 		}
