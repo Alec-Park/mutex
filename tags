@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASCII_SIZE	char_stat.c	7;"	d	file:
+MAX_STRING_LENGTH	char_stat.c	6;"	d	file:
+argv_string	pthread.c	/^	char *		argv_string;$/;"	m	struct:thread_info	file:
+consumer	prod_cons.c	/^void *consumer(void *arg) {$/;"	f
+full	prod_cons.c	/^	int full;$/;"	m	struct:sharedobject	file:
+line	prod_cons.c	/^	char *line;$/;"	m	struct:sharedobject	file:
+linenum	prod_cons.c	/^	int linenum;$/;"	m	struct:sharedobject	file:
+lock	prod_cons.c	/^	pthread_mutex_t lock;$/;"	m	struct:sharedobject	file:
+main	char_stat.c	/^int main(int argc, char *argv[])$/;"	f
+main	prod_cons.c	/^int main (int argc, char *argv[])$/;"	f
+main	pthread.c	/^int main(int argc, char * argv[])$/;"	f
+producer	prod_cons.c	/^void *producer(void *arg) {$/;"	f
+rfile	prod_cons.c	/^	FILE *rfile;$/;"	m	struct:sharedobject	file:
+sharedobject	prod_cons.c	/^typedef struct sharedobject {$/;"	s	file:
+so_t	prod_cons.c	/^} so_t;$/;"	t	typeref:struct:sharedobject	file:
+stat	char_stat.c	/^int stat [MAX_STRING_LENGTH];$/;"	v
+stat2	char_stat.c	/^int stat2 [ASCII_SIZE];$/;"	v
+thread_fn	pthread.c	/^static void * thread_fn(void *arg)$/;"	f	file:
+thread_id	pthread.c	/^	pthread_t 	thread_id;$/;"	m	struct:thread_info	file:
+thread_info	pthread.c	/^struct thread_info {$/;"	s	file:
+thread_num	pthread.c	/^	int			thread_num;$/;"	m	struct:thread_info	file:

@@ -1,0 +1,3 @@
+When the first thread calls pthread_cond_wait(&cond_t, &mutex); it releases the mutex and it waits till condition cond_t is signaled as complete and mutex is available.
+
+So when pthread_cond_signal is called in the other thread, it doesn't "wake up" the thread that waits yet. mutex must be unlocked first, only then there is a chance that first thread will get a lock, which means that "upon successful return of pthread_cond_wait mutex shall have been locked and shall be owned by the calling thread."

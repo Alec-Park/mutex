@@ -8,7 +8,11 @@
 int stat [MAX_STRING_LENGTH];
 int stat2 [ASCII_SIZE];
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]) {
+    charstat(argc, argv);
+}
+
+int charstat(int argc, char *argv[])
 {
 	int rc = 0;
 	size_t length = 0;
@@ -60,7 +64,7 @@ int main(int argc, char *argv[])
 			if (*cptr == '\0') break;
 		}
 		cptr = line;
-		for (int i = 0 ; i < length ; i++) {
+		for (i = 0 ; i < length ; i++) {
 			if (*cptr < 256 && *cptr > 1) {
 				stat2[*cptr]++;
 #ifdef _IO_

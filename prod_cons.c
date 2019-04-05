@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include "char_stat.h"
 
 typedef struct sharedobject {
 	FILE *rfile;
@@ -115,7 +116,10 @@ int main (int argc, char *argv[])
 		perror("rfile");
 		exit(0);
 	}
-	
+
+    //charstat(2, rfile);
+    charstat(argc, argv);
+
     if (argv[2] != NULL) {
 		Nprod = atoi(argv[2]);
 		if (Nprod > 100) Nprod = 100;
